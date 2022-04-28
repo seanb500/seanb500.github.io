@@ -7,3 +7,9 @@ navbar:
       href: index.html
     - text: "About Me"
       href: about.html
+    - text: "Proposal"
+      href: Proposal.html
+    - text: "Homework"
+      href: Byrne_Hw4_danl310.html
+      
+      
