@@ -33,22 +33,26 @@ knitr::include_graphics("Byrne_hw4_q1.gif")
 #question 2
 climate_opinion <- read.csv(
   'https://bcdanl.github.io/data/climate_opinion_2021.csv')
-install.packages("socviz")
+# install.packages("socviz")
 library(socviz)
 library(dplyr)
 library(ggplot2)
 library(tidyverse)
+library(plotly)
 county_map <- county_map
 
 climate_opinion <- climate_opinion %>% filter(belief == "human")
 
-climate_opinion <- climate_opinion %>% mutate(id = as.numeric(id))
-county_map <- county_map %>% mutate(id = as.numeric(id))
+class(climate_opinion$id)
+class(county_map$id)
+# 
+# climate_opinion <- climate_opinion %>% mutate(id = as.numeric(id))
+# county_map <- county_map %>% mutate(id = as.numeric(id))
 
-climate_opinion <- left_join(climate_opinion, county_map, by = 'id')
+climate_opinion_full <- left_join(climate_opinion, county_map, by = 'id')
 
-g <- gpplot(climate_opinion, aes(long, lat, fill = perc, group = group, text = GeoName)) +
-  geom_polygon(color = "gray70", size = .05) +
+g <- ggplot(climate_opinion_full, aes(long, lat, fill = perc, group = group, tooltip = perc, data_id = perc)) +
+  geom_polygon_interactive(color = "gray70", size = .05) +
   coord_equal()
 g
 
@@ -58,6 +62,15 @@ g2 <- g + scale_fill_gradient2(
   high = "#CB4541",
   na.value = "grey50",
   midpoint = 50)
+
+g2
+
+# map_interactive <- ggiraph(ggobj = g2)
+# map_interactive
+
+#save the widget
+# library(htmlwidgets)
+# saveWidget(map_interactive, file = paste0(getwd(), "/climate_opinion_map_interactive.html"))
 
 ```
    

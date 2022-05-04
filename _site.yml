@@ -10,6 +10,8 @@ navbar:
     - text: "Proposal"
       href: Proposal.html
     - text: "Homework"
-      href: Byrne_Hw4_danl310.html
+      href: HW4.html
+    - text: "Shiny"
+      href: TestApp.html
       
       

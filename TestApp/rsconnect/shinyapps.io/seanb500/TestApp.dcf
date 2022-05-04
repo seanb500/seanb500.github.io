@@ -1,0 +1,13 @@
+name: TestApp
+title: TestApp
+username:
+account: seanb500
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6224279
+bundleId: 5865514
+url: https://seanb500.shinyapps.io/TestApp/
+when: 1651598929.64266
+lastSyncTime: 1651598929.64267
+asMultiple: FALSE
+asStatic: FALSE
