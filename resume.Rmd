@@ -32,7 +32,7 @@ library(fontawesome)
 
 
 #### all other entries #####
-cv_entries <- read_csv("_content/cv_entries.csv") %>%
+cv_entries <- read_csv("_content/cv_entries1.csv") %>%
   mutate(year_begin = year(date)) %>%
   mutate(year_end = case_when(
     date_end == "present" ~ date_end,
@@ -66,13 +66,13 @@ blank_year_when_repeated <- function(cv_entry_tibble){
 :::: {style="display: flex;"}
 
 ::: {}
-I view myself as an **applied economist** with interest in the field of **environmental economics** and a particular focus on **climate change policy**. Methodologically, I make use of **econometric/machine learning methods and data science tools** to conduct empirical analysis. I also use computational methods to solve **integrated assessment models (IAM) of climate change** as well as theoretical economic models, such as **dynamic contracts**.
+I view myself as an future financial analyst with interest in the field of finance and a particular focus on capital markets. Methodologically, I make use of gathered data and analyis with group members to conduct empirical analysis. I also use computational methods to solve some models but I will be learning way more about that next year at Binghamton when I earn my MBA
 
 
-My **research** focuses on how to improve **effectiveness of climate policy** at both micro and macro levels. In particular, I am interested in building relevant climate-economy models that analyze **the interaction between economies and the climate under risks arising from (1) climate change and (2) a transition to carbon-neutral economies**.
+My current research at school has to do with focusing on the ins and outs of studying habits and how I will translate that into a future career. While we did not offer a finance major at Geneseo in my time here, I know that I have a whole lot to learn ahead of me
 
 
-As **a teacher in economics and data science**, my goal is to equip students with the essential analytical tools of machine learning, econometrics, and data analytics to **think critically about business and socioeconomic real-world issues**. As an instructor, I let students use those analytical tools to deal with important **business strategies, social issues, and individual decision-making**. 
+As student athlete, my goal is to make an impact on and off the field as a good person. I want to be a role model through strong study habits, dedication to my sport and also doing the little nitty gritty work that no one realizes you do.
 
 
 Here is my [curriculum vitae](choe_cv.pdf) `r fa("fas fa-file-pdf", fill = "red")`.
@@ -124,158 +124,25 @@ cv_entries %>%
 
 <br>
 
-# Research
-## Working papers
-```{r}
-cv_entries %>% 
-  filter(type == 'wp') %>% 
-  mutate(what = str_c("<span class='cv-entry-title'>", what, "&nbsp;</span><br> ", additional_info)) %>% 
-  select(type, what) %>% 
-  mutate(type = "") %>% 
-  kbl(padding = 0, col.names = NULL, escape=FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) 
-```
-
-<br>
-
-## Work in progress
-```{r}
-cv_entries %>% 
-  filter(type == 'wp-progress') %>% 
-  mutate(what = str_c("<span class='cv-entry-title'>", what, "&nbsp;</span><br> ", additional_info)) %>% 
-  select(type, what) %>% 
-  mutate(type = "") %>% 
-  kbl(padding = 0, col.names = NULL, escape=FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) 
-```
-
-
-<br>
-
-# Teaching
-```{r}
-cv_entries %>% 
-  filter(type == 'teaching') %>% 
-  mutate(what = ifelse(!is.na(additional_info), 
-    str_c("<span class='cv-entry-title'>", what, "</span><br class='work-break'>", where, "<br>", additional_info),
-    str_c("<span class='cv-entry-title'>", what, "</span><br class='work-break'>", where))) %>% 
-  select(year, what) %>% 
-  kbl(padding = 0, col.names = NULL, escape = FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed"))  %>% 
-  column_spec(1, width = "15%") 
-  
-```
-
-<br>
-
-# Professional activities
-## Presentations
-```{r}
-cv_entries %>% 
-  filter(type == 'presentation') %>% 
-  mutate(what = str_c("<span class='cv-entry-title'>", what, "</span>, ", where)) %>% 
-  select(year_begin, what) %>% 
-  kbl(padding = 0, col.names = NULL, align = c("l", "l"), escape = FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) %>% 
-  column_spec(1, width = "15%")  
-```
-
-<br>
-
-## Memberships
-```{r}
-cv_entries %>% 
-  filter(type == 'membership', is.na(exclude)) %>%
-  mutate(what = str_c("<span class='cv-entry-title'>", what, "</span>")) %>% 
-  select(year, what) %>% 
-  kbl(padding = 0, col.names = NULL, escape = FALSE) %>%
-  kable_styling( bootstrap_options = c("hover"))  %>% 
-  column_spec(1, width = "15%")
-
-```
-
-<br>
-
-# Hornors & Awards
-```{r}
-cv_entries %>% 
-  filter(type == 'awards') %>%
-  filter(!(website == "n") | is.na(website)) %>% 
-  mutate(what = if_else(
-    !is.na(where),
-    str_c("<span class='cv-entry-title'>", what, "</span>, ", where),
-    str_c("<span class='cv-entry-title'>", what, "</span>"))
-  ) %>% 
-  blank_year_when_repeated() %>% 
-  select(year_begin, what) %>% 
-  kbl(padding = 0, col.names = NULL, align = c("l", "l"), escape = FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed"))   %>% 
-  column_spec(1, width = "15%")
-```
- 
-<br>
-
-# Grants and funding
-```{r}
-cv_entries %>% 
-  filter(type == 'minor_grants' | type == 'major_grants',
-         is.na(exclude)) %>%
-  filter(!(website == "n") | is.na(website)) %>% 
-  mutate(what = if_else(
-    !is.na(additional_info),
-    str_c("<span class='cv-entry-title'>", what, "</span>, ", where, "<br>", additional_info),
-    str_c("<span class='cv-entry-title'>", what, "</span>, ", where))
-  ) %>% 
-  blank_year_when_repeated() %>% 
-  select(year, what) %>% 
-  kbl(padding = 0, col.names = NULL, align = c("l", "l"), escape = FALSE)  %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) %>% 
-  column_spec(1, width = "15%")   
-```
-
-<br>
-
-# Service
-```{r}
-cv_entries %>% 
-  filter(type == 'service') %>% 
-  mutate(where = ifelse(!is.na(url), str_c("[", where, "](", url, ")"), where)) %>% 
-  mutate(what = ifelse(!is.na(additional_info),
-                       str_c("<span class='cv-entry-title'>", what,
-                      "</span><br class='work-break'>", 
-                      where),
-                      str_c("<span class='cv-entry-title'>", what,
-                      "</span><br class='work-break'>", 
-                      where))) %>% 
-  arrange(desc(date_end), desc(date)) %>% 
-  select(year, what) %>% 
-  kbl(padding = 0, col.names = NULL, escape = FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) %>% 
-  column_spec(1, width = "15%")  
-
-```
-
-<br>
-
-# Miscelaneous
-```{r}
-cv_entries %>% 
-  filter(type == 'technical') %>% 
-  mutate(what = str_c("<span class='cv-entry-title'>", what, "&nbsp;</span> ")) %>% 
-  select(year, what, additional_info) %>% 
-  mutate(year = what) %>% select(-what) %>% 
-  kbl(padding = 0, col.names = NULL, escape=FALSE) %>%
-  kable_styling( bootstrap_options = c("hover", "condensed")) %>% 
-  column_spec(1, width = "15%")  
-```
-
-
-<br>
-
 # Non-Academic Experience
 ```{r}
 cv_entries %>% 
-  filter(type == 'non-academic', is.na(website)) %>% 
+  filter(type == 'experience', is.na(website)) %>% 
+  mutate(additional_info = replace_na(additional_info, "")) %>% 
+  mutate(what = str_c("<span class='cv-entry-title'>", what, "</span><br class='work-break'>", where, "<br>", additional_info)) %>% 
+  arrange(desc(date)) %>% 
+  select(year, what) %>% 
+  kbl(padding = 0, col.names = NULL, escape = FALSE) %>%
+  kable_styling( bootstrap_options = c("hover", "condensed"))   %>% 
+  column_spec(1, width = "15%")
+```
+
+<br>
+
+# College Activities
+```{r}
+cv_entries %>% 
+  filter(type == 'college_act', is.na(website)) %>% 
   mutate(additional_info = replace_na(additional_info, "")) %>% 
   mutate(what = str_c("<span class='cv-entry-title'>", what, "</span><br class='work-break'>", where, "<br>", additional_info)) %>% 
   arrange(desc(date)) %>% 

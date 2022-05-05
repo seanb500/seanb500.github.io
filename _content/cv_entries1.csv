@@ -1,0 +1,8 @@
+type,exclude,date,date_end,what,what_translation,institution,department,where,additional_info,additional_info2,url,slides,video,short_cv,order,academic,professional_2_page,website,one_column_paged,brief_no_pubs,humanities,humanities_description
+current_positions,NA,2021-09-01,present,Lecturer in Data Analytics,NA,NA,NA,"School of Business, SUNY Geneseo",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+education,NA,2018-08-23,2022-05-21,B.S. in Business Administration,NA,NA,NA,SUNY Geneseo,,,NA,NA,NA,y,NA,NA,NA,NA,NA,NA,NA,NA
+education,NA,2022-08-21,2023-05-14,"MBA in Business Administration, Finance Concentration",NA,NA,NA,Binghamton University,Will attend after graduation from SUNY Geneseo,NA,NA,NA,NA,y,NA,NA,NA,NA,NA,NA,NA,NA
+experience,NA,2021-05-19,2021-08-16,Summer Intern/Account Coordinator,NA,NA,Insurance,American Risk Advisors Inc.,Generated insurance proposals and premiums using client data and a proprietary software system.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+experience,NA,2016-06-20,2020-08-10,Retail Worker,NA,NA,Service and Retail,Tropical Smoothie,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+college_act,NA,2018-09-01,2022-05-22,Captain Geneseo Division III Lacrosse Team,NA,NA,NA,SUNY Geneseo,"Planed and implemented academic meetings, team workouts, and weekly team meetings. This became more critical after the resignation of the head coach",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+college_act,NA,2020-09-01,2022-05-22,Equity Analyst and Member of the Investment committee,NA,NA,NA,Geneseo Student Managed Investment Fund,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

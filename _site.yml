@@ -13,5 +13,7 @@ navbar:
       href: HW4.html
     - text: "Shiny"
       href: TestApp.html
+    - text: "resume"
+      href: resume.html
       
       
