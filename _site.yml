@@ -15,5 +15,7 @@ navbar:
       href: TestApp.html
     - text: "resume"
       href: resume.html
+    - text: "hw 6 SHINY"
+      href: hw6.html
       
       
