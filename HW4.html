@@ -260,6 +260,9 @@ $(document).ready(function () {
 <li>
   <a href="resume.html">resume</a>
 </li>
+<li>
+  <a href="hw6.html">hw 6 SHINY</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -297,15 +300,193 @@ p &lt;- ggplot(imf_growth, aes(x= country, y= gy, fill= country))+
 fig_GDP &lt;- p + transition_states(quarter, transition_length = 1, state_length =1) +
   labs(title = &quot;Growth Rate of GDP per Worker: {closest_state}&quot;, x = &quot;&quot;, y= &quot;&quot;)+
   theme_minimal()+ theme(legend.position = &quot;none&quot;)
-fig_GDP
-
-animate(fig_GDP, renderer = gifski_renderer(&quot;Byrne_hw4_q1.gif&quot;))</code></pre>
+fig_GDP</code></pre>
+<pre><code>## 
+Rendering [&gt;---------------------------------------------------] at 4.3 fps ~ eta: 23s
+Rendering [&gt;---------------------------------------------------] at 4.6 fps ~ eta: 21s
+Rendering [=&gt;--------------------------------------------------] at 4.7 fps ~ eta: 21s
+Rendering [=&gt;--------------------------------------------------] at 4.7 fps ~ eta: 20s
+Rendering [==&gt;-------------------------------------------------] at 4.8 fps ~ eta: 20s
+Rendering [===&gt;------------------------------------------------] at 4.8 fps ~ eta: 19s
+Rendering [===&gt;------------------------------------------------] at 4.9 fps ~ eta: 19s
+Rendering [====&gt;-----------------------------------------------] at 4.9 fps ~ eta: 19s
+Rendering [====&gt;-----------------------------------------------] at 4.9 fps ~ eta: 18s
+Rendering [=====&gt;----------------------------------------------] at 4.9 fps ~ eta: 18s
+Rendering [======&gt;---------------------------------------------] at 4.9 fps ~ eta: 18s
+Rendering [======&gt;---------------------------------------------] at 4.9 fps ~ eta: 17s
+Rendering [=======&gt;----------------------------------------------] at 5 fps ~ eta: 17s
+Rendering [=======&gt;--------------------------------------------] at 4.9 fps ~ eta: 17s
+Rendering [========&gt;-------------------------------------------] at 4.9 fps ~ eta: 17s
+Rendering [=========&gt;--------------------------------------------] at 5 fps ~ eta: 17s
+Rendering [=========&gt;--------------------------------------------] at 5 fps ~ eta: 16s
+Rendering [==========&gt;-------------------------------------------] at 5 fps ~ eta: 16s
+Rendering [==========&gt;-----------------------------------------] at 4.8 fps ~ eta: 16s
+Rendering [===========&gt;----------------------------------------] at 4.8 fps ~ eta: 16s
+Rendering [===========&gt;----------------------------------------] at 4.9 fps ~ eta: 16s
+Rendering [============&gt;---------------------------------------] at 4.9 fps ~ eta: 15s
+Rendering [=============&gt;--------------------------------------] at 4.9 fps ~ eta: 15s
+Rendering [==============&gt;-------------------------------------] at 4.9 fps ~ eta: 15s
+Rendering [===============&gt;------------------------------------] at 4.9 fps ~ eta: 14s
+Rendering [================&gt;-----------------------------------] at 4.9 fps ~ eta: 14s
+Rendering [=================&gt;----------------------------------] at 4.9 fps ~ eta: 13s
+Rendering [==================&gt;---------------------------------] at 4.9 fps ~ eta: 13s
+Rendering [===================&gt;--------------------------------] at 4.9 fps ~ eta: 13s
+Rendering [===================&gt;--------------------------------] at 4.9 fps ~ eta: 12s
+Rendering [====================&gt;-------------------------------] at 4.9 fps ~ eta: 12s
+Rendering [=====================&gt;------------------------------] at 4.9 fps ~ eta: 12s
+Rendering [======================&gt;-----------------------------] at 4.9 fps ~ eta: 11s
+Rendering [=======================&gt;----------------------------] at 4.9 fps ~ eta: 11s
+Rendering [========================&gt;---------------------------] at 4.9 fps ~ eta: 11s
+Rendering [========================&gt;---------------------------] at 4.9 fps ~ eta: 10s
+Rendering [=========================&gt;--------------------------] at 4.9 fps ~ eta: 10s
+Rendering [==========================&gt;-------------------------] at 4.9 fps ~ eta: 10s
+Rendering [============================&gt;-------------------------] at 5 fps ~ eta:  9s
+Rendering [=============================&gt;------------------------] at 5 fps ~ eta:  9s
+Rendering [==============================&gt;-----------------------] at 5 fps ~ eta:  9s
+Rendering [==============================&gt;-----------------------] at 5 fps ~ eta:  8s
+Rendering [===============================&gt;----------------------] at 5 fps ~ eta:  8s
+Rendering [================================&gt;---------------------] at 5 fps ~ eta:  8s
+Rendering [=================================&gt;--------------------] at 5 fps ~ eta:  7s
+Rendering [==================================&gt;-------------------] at 5 fps ~ eta:  7s
+Rendering [=================================&gt;------------------] at 4.9 fps ~ eta:  7s
+Rendering [===================================&gt;------------------] at 5 fps ~ eta:  7s
+Rendering [==================================&gt;-----------------] at 4.9 fps ~ eta:  6s
+Rendering [===================================&gt;----------------] at 4.9 fps ~ eta:  6s
+Rendering [=====================================&gt;----------------] at 5 fps ~ eta:  6s
+Rendering [====================================&gt;---------------] at 4.9 fps ~ eta:  6s
+Rendering [======================================&gt;---------------] at 5 fps ~ eta:  5s
+Rendering [=====================================&gt;--------------] at 4.9 fps ~ eta:  5s
+Rendering [======================================&gt;-------------] at 4.9 fps ~ eta:  5s
+Rendering [=======================================&gt;------------] at 4.9 fps ~ eta:  5s
+Rendering [=========================================&gt;------------] at 5 fps ~ eta:  5s
+Rendering [=========================================&gt;------------] at 5 fps ~ eta:  4s
+Rendering [==========================================&gt;-----------] at 5 fps ~ eta:  4s
+Rendering [===========================================&gt;----------] at 5 fps ~ eta:  4s
+Rendering [============================================&gt;---------] at 5 fps ~ eta:  3s
+Rendering [=============================================&gt;--------] at 5 fps ~ eta:  3s
+Rendering [==============================================&gt;-------] at 5 fps ~ eta:  3s
+Rendering [===============================================&gt;------] at 5 fps ~ eta:  2s
+Rendering [================================================&gt;-----] at 5 fps ~ eta:  2s
+Rendering [=================================================&gt;----] at 5 fps ~ eta:  2s
+Rendering [===============================================&gt;----] at 4.9 fps ~ eta:  1s
+Rendering [================================================&gt;---] at 4.9 fps ~ eta:  1s
+Rendering [=================================================&gt;--] at 4.9 fps ~ eta:  1s
+Rendering [==================================================&gt;-] at 4.9 fps ~ eta:  0s
+Rendering [====================================================] at 4.9 fps ~ eta:  0s
+                                                                                      </code></pre>
+<pre class="r"><code>animate(fig_GDP, renderer = gifski_renderer(&quot;Byrne_hw4_q1.gif&quot;))</code></pre>
+<pre><code>## 
+Rendering [&gt;---------------------------------------------------] at 6.1 fps ~ eta: 16s
+Rendering [=&gt;--------------------------------------------------] at 5.5 fps ~ eta: 18s
+Rendering [=&gt;--------------------------------------------------] at 5.2 fps ~ eta: 19s
+Rendering [==&gt;-------------------------------------------------] at 5.2 fps ~ eta: 18s
+Rendering [===&gt;------------------------------------------------] at 5.1 fps ~ eta: 18s
+Rendering [====&gt;-----------------------------------------------] at 5.1 fps ~ eta: 18s
+Rendering [=====&gt;----------------------------------------------] at 5.2 fps ~ eta: 17s
+Rendering [======&gt;---------------------------------------------] at 5.2 fps ~ eta: 17s
+Rendering [======&gt;---------------------------------------------] at 5.3 fps ~ eta: 16s
+Rendering [=======&gt;--------------------------------------------] at 5.3 fps ~ eta: 16s
+Rendering [========&gt;-------------------------------------------] at 5.3 fps ~ eta: 16s
+Rendering [========&gt;-------------------------------------------] at 5.3 fps ~ eta: 15s
+Rendering [=========&gt;------------------------------------------] at 5.3 fps ~ eta: 15s
+Rendering [=========&gt;------------------------------------------] at 5.4 fps ~ eta: 15s
+Rendering [==========&gt;-----------------------------------------] at 5.4 fps ~ eta: 15s
+Rendering [==========&gt;-----------------------------------------] at 5.4 fps ~ eta: 14s
+Rendering [===========&gt;----------------------------------------] at 5.3 fps ~ eta: 14s
+Rendering [============&gt;---------------------------------------] at 5.3 fps ~ eta: 14s
+Rendering [=============&gt;--------------------------------------] at 5.3 fps ~ eta: 14s
+Rendering [=============&gt;--------------------------------------] at 5.4 fps ~ eta: 14s
+Rendering [==============&gt;-------------------------------------] at 5.4 fps ~ eta: 13s
+Rendering [===============&gt;------------------------------------] at 5.4 fps ~ eta: 13s
+Rendering [================&gt;-----------------------------------] at 5.4 fps ~ eta: 13s
+Rendering [================&gt;-----------------------------------] at 5.4 fps ~ eta: 12s
+Rendering [=================&gt;----------------------------------] at 5.4 fps ~ eta: 12s
+Rendering [==================&gt;---------------------------------] at 5.4 fps ~ eta: 12s
+Rendering [===================&gt;--------------------------------] at 5.4 fps ~ eta: 12s
+Rendering [===================&gt;--------------------------------] at 5.4 fps ~ eta: 11s
+Rendering [====================&gt;-------------------------------] at 5.4 fps ~ eta: 11s
+Rendering [=====================&gt;------------------------------] at 5.4 fps ~ eta: 11s
+Rendering [======================&gt;-----------------------------] at 5.4 fps ~ eta: 10s
+Rendering [=======================&gt;----------------------------] at 5.4 fps ~ eta: 10s
+Rendering [========================&gt;---------------------------] at 5.4 fps ~ eta: 10s
+Rendering [========================&gt;---------------------------] at 5.4 fps ~ eta:  9s
+Rendering [=========================&gt;--------------------------] at 5.4 fps ~ eta:  9s
+Rendering [==========================&gt;-------------------------] at 5.4 fps ~ eta:  9s
+Rendering [===========================&gt;------------------------] at 5.4 fps ~ eta:  9s
+Rendering [============================&gt;-----------------------] at 5.4 fps ~ eta:  8s
+Rendering [=============================&gt;----------------------] at 5.4 fps ~ eta:  8s
+Rendering [==============================&gt;---------------------] at 5.4 fps ~ eta:  8s
+Rendering [==============================&gt;---------------------] at 5.4 fps ~ eta:  7s
+Rendering [===============================&gt;--------------------] at 5.4 fps ~ eta:  7s
+Rendering [================================&gt;-------------------] at 5.4 fps ~ eta:  7s
+Rendering [=================================&gt;------------------] at 5.4 fps ~ eta:  6s
+Rendering [==================================&gt;-----------------] at 5.4 fps ~ eta:  6s
+Rendering [===================================&gt;----------------] at 5.4 fps ~ eta:  6s
+Rendering [====================================&gt;---------------] at 5.4 fps ~ eta:  5s
+Rendering [=====================================&gt;--------------] at 5.4 fps ~ eta:  5s
+Rendering [======================================&gt;-------------] at 5.4 fps ~ eta:  5s
+Rendering [=======================================&gt;------------] at 5.4 fps ~ eta:  4s
+Rendering [========================================&gt;-----------] at 5.4 fps ~ eta:  4s
+Rendering [=========================================&gt;----------] at 5.4 fps ~ eta:  4s
+Rendering [=========================================&gt;----------] at 5.4 fps ~ eta:  3s
+Rendering [==========================================&gt;---------] at 5.4 fps ~ eta:  3s
+Rendering [===========================================&gt;--------] at 5.4 fps ~ eta:  3s
+Rendering [============================================&gt;-------] at 5.4 fps ~ eta:  3s
+Rendering [============================================&gt;-------] at 5.5 fps ~ eta:  2s
+Rendering [=============================================&gt;------] at 5.5 fps ~ eta:  2s
+Rendering [==============================================&gt;-----] at 5.5 fps ~ eta:  2s
+Rendering [===============================================&gt;----] at 5.5 fps ~ eta:  1s
+Rendering [================================================&gt;---] at 5.5 fps ~ eta:  1s
+Rendering [=================================================&gt;--] at 5.5 fps ~ eta:  1s
+Rendering [==================================================&gt;-] at 5.5 fps ~ eta:  0s
+Rendering [====================================================] at 5.5 fps ~ eta:  0s
+                                                                                      </code></pre>
 <p><img src="HW4_files/figure-html/unnamed-chunk-1-1.gif" /><!-- --></p>
 <pre class="r"><code>knitr::include_graphics(&quot;Byrne_hw4_q1.gif&quot;)</code></pre>
 <p><img src="Byrne_hw4_q1.gif" /><!-- --></p>
+<pre class="r"><code>#question 2
+climate_opinion &lt;- read.csv(
+  &#39;https://bcdanl.github.io/data/climate_opinion_2021.csv&#39;)
+# install.packages(&quot;socviz&quot;)
+library(socviz)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(plotly)
+county_map &lt;- county_map
+
+climate_opinion &lt;- climate_opinion %&gt;% filter(belief == &quot;human&quot;)
+
+class(climate_opinion$id)</code></pre>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>class(county_map$id)</code></pre>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<p><img src="HW4_files/figure-html/unnamed-chunk-2-1.png" width="672" /><img src="HW4_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<pre class="r"><code># 
+climate_opinion &lt;- climate_opinion %&gt;% mutate(id = as.numeric(id))
+county_map &lt;- county_map %&gt;% mutate(id = as.numeric(id))
+
+climate_opinion_full &lt;- left_join(climate_opinion, county_map, by = &#39;id&#39;)
+
+g &lt;- ggplot(climate_opinion_full, aes(long, lat, fill = perc, group = group, tooltip = perc, data_id = perc)) +
+  geom_polygon_interactive(color = &quot;gray70&quot;, size = .05) +
+  coord_equal()
+g</code></pre>
+<p><img src="HW4_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>g2 &lt;- g + scale_fill_gradient2(
+  low = &quot;2E74C0&quot;,
+  mid = &quot;white&quot;,
+  high = &quot;#CB4541&quot;,
+  na.value = &quot;grey50&quot;,
+  midpoint = 50)
+
+g2</code></pre>
+<p><img src="HW4_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<pre class="r"><code># map_interactive &lt;- ggiraph(ggobj = g2)
+# map_interactive
+
+#save the widget
+# library(htmlwidgets)
+# saveWidget(map_interactive, file = paste0(getwd(), &quot;/climate_opinion_map_interactive.html&quot;))</code></pre>
 
 
 

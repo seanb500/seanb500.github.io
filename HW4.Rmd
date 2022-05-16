@@ -46,8 +46,8 @@ climate_opinion <- climate_opinion %>% filter(belief == "human")
 class(climate_opinion$id)
 class(county_map$id)
 # 
-# climate_opinion <- climate_opinion %>% mutate(id = as.numeric(id))
-# county_map <- county_map %>% mutate(id = as.numeric(id))
+climate_opinion <- climate_opinion %>% mutate(id = as.numeric(id))
+county_map <- county_map %>% mutate(id = as.numeric(id))
 
 climate_opinion_full <- left_join(climate_opinion, county_map, by = 'id')
 
