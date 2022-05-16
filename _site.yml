@@ -16,6 +16,6 @@ navbar:
     - text: "resume"
       href: resume.html
     - text: "hw 6 SHINY"
-      href: hw6.html
+      href: https://seanb500.shinyapps.io/SHINY/
       
       
