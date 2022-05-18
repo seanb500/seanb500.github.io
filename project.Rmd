@@ -55,6 +55,10 @@ After cleaning the data based on the variables we wanted to use, then seen in fi
 
 <br>
 
+Here is the SHINY App link below. When you click on it, there will be a really cool interactive map based off of our project data.
+
+<br>
+
 ````{=html}
 <style>iframe{height: 1200px; width: 800px}</style>
 <iframe height="100%" width="100%" frameborder="no"
