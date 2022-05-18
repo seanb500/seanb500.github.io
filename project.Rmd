@@ -55,6 +55,13 @@ After cleaning the data based on the variables we wanted to use, then seen in fi
 
 <br>
 
+````{=html}
+<style>iframe{height: 1200px; width: 800px}</style>
+<iframe height="100%" width="100%" frameborder="no"
+src="https://seanb500.shinyapps.io/SHINY/">
+</iframe>
+````
+
 # Conceptual Framework
 The economic and business ideas behind our models lie within the fact that student debt is a growing national crisis that has gotten out of control in the last decade or so causing financial harm to many Americans. With confidence, almost everyone who will come to read this article can say that at one point or another they know of or knew someone who has complained at least once about their recurring student loan payments. As a result, we wanted to take a deeper dive into some of the factors contributing to student debt and also evaluate things like what majors would have the least amount of debt and even what institutions you should attend for a minimal amount of debt.
 	
