@@ -9,6 +9,8 @@ navbar:
       href: about.html
     - text: "Proposal"
       href: Proposal.html
+    - text: "Team Project"
+      href: project.html
     - text: "Homework"
       href: HW4.html
     - text: "Shiny"
